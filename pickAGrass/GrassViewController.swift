@@ -8,6 +8,8 @@
 
 import UIKit
 
+var pokemonList = ["Bulbasaur", "Mudkip", "Ninetails", "Pichu", "Phanpy", "Munna", "Mimikyu", "Scraggy", "Scizor", "Ducklett", "Mawile", "Snorunt", "Palkia", "Swirlix", "Seviper", "Bidoof", "Mienfoo", "Onix"]
+
 class GrassViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -25,40 +27,31 @@ class GrassViewController: UIViewController {
 
     @IBAction func showMessage(sender: UIButton) {
         var grassMessage = "Grass not working"
+        var monWasFound = false
         
         let randNum = Int.random(in: 1 ... 5)
         
         if (randNum == 1) {
             let pokemonFound = whatPokemonFound()
              grassMessage = "You found a \(pokemonFound)!"
+            monWasFound = true
         } else if (randNum == 2) {
             grassMessage = "You found a useless potato."
         } else {
             grassMessage = "No Pokemon here."
         }
         let alertController = UIAlertController(title: "Grass Patch", message: grassMessage, preferredStyle: .alert)
-       
-        let alertJawn = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
-            self.performSegue(withIdentifier: "FoundPokemonSegue", sender: self)})
         
+        var alertJawn = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+            self.performSegue(withIdentifier: "FoundPokemonSegue", sender: self)})
+        if (monWasFound == false){
+            alertJawn = UIAlertAction(title: "OK", style: .default, handler: nil)
+        }
         alertController.addAction(alertJawn)
     
         self.present(alertController, animated: true, completion: nil)
-
-        
-        
-        /*
-         let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action) -> Void in
-         //The (withIdentifier: "VC2") is the Storyboard Segue identifier.
-         self.performSegue(withIdentifier: "VC2", sender: self)
-         })
-         
-         alertController.addAction(ok)
-         self.present(alertController, animated: true, completion: nil)
-         }*/
     }
     func whatPokemonFound() -> String {
-        var pokemonList = ["Bulbasaur", "Mudkip", "Ninetails", "Pichu", "Phanpy", "Munna", "Mimikyu", "Scraggy", "Scizor", "Ducklett", "Mawile", "Snorunt", "Palkia", "Swirlix", "Seviper", "Bidoof", "Mienfoo", "Onix"]
         let randPokemonIndex = Int.random(in: 1 ... 18)
         return pokemonList[randPokemonIndex]
     }
