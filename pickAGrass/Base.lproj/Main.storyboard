@@ -128,10 +128,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SX-bx-sxW">
-                                <rect key="frame" x="20" y="66" width="42" height="21"/>
+                                <rect key="frame" x="20" y="1021" width="794" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.55573564767837524" green="0.66890114545822144" blue="0.45204377174377441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -140,6 +140,7 @@
                     </view>
                     <connections>
                         <outlet property="congratsText" destination="ZCq-e6-weX" id="qoz-hR-oov"/>
+                        <outlet property="foundPokeLabel" destination="2SX-bx-sxW" id="d9y-ca-lTn"/>
                         <outlet property="picPokemonFound" destination="vdp-6Z-koU" id="EZA-x3-iPh"/>
                     </connections>
                 </viewController>
