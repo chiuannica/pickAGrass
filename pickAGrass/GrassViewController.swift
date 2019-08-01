@@ -8,15 +8,6 @@
 
 import UIKit
 
-var pokemonList = ["Bulbasaur", "Mudkip", "Ninetales", "Pichu", "Phanpy", "Munna", "Mimikyu", "Scraggy", "Scizor", "Ducklett", "Mawile", "Snorunt", "Palkia", "Swirlix", "Seviper", "Bidoof", "Mienfoo", "Onix"]
-
-func whatPokemonFound() -> String {
-    let randPokemonIndex = Int.random(in: 1 ... 18)
-    return pokemonList[randPokemonIndex]
-}
-
-let pokemonFound = whatPokemonFound()
-
 class GrassViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -39,7 +30,7 @@ class GrassViewController: UIViewController {
         let randNum = Int.random(in: 1 ... 5)
         
         if (randNum == 1) {
-             grassMessage = "You found a \(pokemonFound)!"
+             grassMessage = "You found a Pokemon!"
             monWasFound = true
         } else if (randNum == 2) {
             grassMessage = "You found a useless potato."

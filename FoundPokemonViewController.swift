@@ -8,6 +8,13 @@
 
 import UIKit
 
+var pokemonList = ["Bulbasaur", "Mudkip", "Ninetales", "Pichu", "Phanpy", "Munna", "Mimikyu", "Scraggy", "Scizor", "Ducklett", "Mawile", "Snorunt", "Palkia", "Swirlix", "Seviper", "Bidoof", "Mienfoo", "Onix"]
+
+func whatPokemonFound() -> String {
+    let randPokemonIndex = Int.random(in: 1 ... 18)
+    return pokemonList[randPokemonIndex]
+}
+
 var PokeDict = ["Bulbasaur": "001",
                 "Mudkip": "258",
                 "Ninetales": "038",
@@ -27,7 +34,7 @@ var PokeDict = ["Bulbasaur": "001",
                 "Mienfoo": "619",
                 "Onix": "095"]
 class FoundPokemonViewController: UIViewController {
-
+    
     @IBOutlet weak var congratsText: UILabel!
     
     @IBOutlet weak var picPokemonFound: UIImageView!
@@ -38,8 +45,12 @@ class FoundPokemonViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
+        let pokemonFound = whatPokemonFound()
         congratsText.text = "You found a \(pokemonFound)!"
         picPokemonFound.image =  UIImage(named: PokeDict[pokemonFound]!)
+        
+        var foundPokemonList = [String]()
+        foundPokemonList.append(pokemonFound)
     }
     
 
