@@ -24,17 +24,26 @@ class GrassViewController: UIViewController {
     @IBOutlet weak var grass6: UIButton!
 
     @IBAction func showMessage(sender: UIButton) {
-        var alertController = UIAlertController(title: "Grass Patch", message: "Grass not working", preferredStyle: .alert)
+        var grassMessage = "Grass not working"
         
-        let randNum = Int.random(in: 1 ... 6)
+        let randNum = Int.random(in: 1 ... 5)
         
         if (randNum == 1) {
-             alertController = UIAlertController(title: "Grass Patch", message: "You found a Pokemon!", preferredStyle: .alert)
+            let pokemonFound = whatPokemonFound()
+             grassMessage = "You found a \(pokemonFound)!"
+        } else if (randNum == 2) {
+            grassMessage = "You found a useless potato."
         } else {
-            alertController = UIAlertController(title: "Grass Patch", message: "No Pokemon here", preferredStyle: .alert)
+            grassMessage = "No Pokemon here."
         }
+        let alertController = UIAlertController(title: "Grass Patch", message: grassMessage, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
+    
         present(alertController, animated: true, completion: nil)
+    }
+    func whatPokemonFound() -> String {
+        var pokemonList = ["Bulbasaur", "Mudkip", "Ninetails", "Pichu", "Phanpy", "Munna", "Mimikyu", "Scraggy", "Scizor", "Ducklett", "Mawile", "Snorunt", "Palkia", "Swirlix", "Seviper", "Bidoof", "Mienfoo", "Onix"]
+        let randPokemonIndex = Int.random(in: 1 ... 18)
+        return pokemonList[randPokemonIndex]
     }
 }
