@@ -66,6 +66,13 @@
                                     <action selector="showMessageWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="neS-qd-Pdm"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FNS-ZE-bZQ">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Grass" id="o2O-1s-JQx"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.44560164213180542" green="0.78962379693984985" blue="0.63131445646286011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -77,11 +84,42 @@
                         <outlet property="grass4" destination="rad-Lq-MCl" id="dWl-sr-jJN"/>
                         <outlet property="grass5" destination="nCu-FN-cGm" id="iOD-Wv-ytI"/>
                         <outlet property="grass6" destination="GEj-yT-4AA" id="p1v-Dg-cbr"/>
+                        <segue destination="whC-YO-62w" kind="show" identifier="FoundPokemonSegue" id="qa4-Zg-D4N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.482014388489212" y="20.603015075376884"/>
+            <point key="canvasLocation" x="-61" y="33"/>
+        </scene>
+        <!--Found Pokemon View Controller-->
+        <scene sceneID="EUk-5n-fTu">
+            <objects>
+                <viewController id="whC-YO-62w" customClass="FoundPokemonViewController" customModule="pickAGrass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Xa-23-B2M">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clD-sY-P2l">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Found Pokemon" id="Lzw-FV-bIX">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="esh-bt-vjR">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="ZzP-MR-K2c"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WY0-uZ-rdc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ha-Cm-Prj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="33"/>
         </scene>
     </scenes>
     <resources>

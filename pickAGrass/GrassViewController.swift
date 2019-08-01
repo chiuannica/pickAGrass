@@ -37,9 +37,25 @@ class GrassViewController: UIViewController {
             grassMessage = "No Pokemon here."
         }
         let alertController = UIAlertController(title: "Grass Patch", message: grassMessage, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+       
+        let alertJawn = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+            self.performSegue(withIdentifier: "FoundPokemonSegue", sender: self)})
+        
+        alertController.addAction(alertJawn)
     
-        present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
+
+        
+        
+        /*
+         let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action) -> Void in
+         //The (withIdentifier: "VC2") is the Storyboard Segue identifier.
+         self.performSegue(withIdentifier: "VC2", sender: self)
+         })
+         
+         alertController.addAction(ok)
+         self.present(alertController, animated: true, completion: nil)
+         }*/
     }
     func whatPokemonFound() -> String {
         var pokemonList = ["Bulbasaur", "Mudkip", "Ninetails", "Pichu", "Phanpy", "Munna", "Mimikyu", "Scraggy", "Scizor", "Ducklett", "Mawile", "Snorunt", "Palkia", "Swirlix", "Seviper", "Bidoof", "Mienfoo", "Onix"]

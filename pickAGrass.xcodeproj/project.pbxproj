@@ -13,6 +13,7 @@
 		830CDAD622F31A0600C2BC91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 830CDAD522F31A0600C2BC91 /* Assets.xcassets */; };
 		830CDAD922F31A0600C2BC91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830CDAD722F31A0600C2BC91 /* LaunchScreen.storyboard */; };
 		830CDAE322F32BCA00C2BC91 /* GrassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CDAE222F32BCA00C2BC91 /* GrassViewController.swift */; };
+		830CDAE922F355A200C2BC91 /* FoundPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CDAE822F355A200C2BC91 /* FoundPokemonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		830CDAD822F31A0600C2BC91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		830CDADA22F31A0600C2BC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		830CDAE222F32BCA00C2BC91 /* GrassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassViewController.swift; sourceTree = "<group>"; };
+		830CDAE822F355A200C2BC91 /* FoundPokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundPokemonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		830CDABF22F31A0300C2BC91 = {
 			isa = PBXGroup;
 			children = (
+				830CDAE822F355A200C2BC91 /* FoundPokemonViewController.swift */,
 				830CDACA22F31A0400C2BC91 /* pickAGrass */,
 				830CDAC922F31A0400C2BC91 /* Products */,
 			);
@@ -140,6 +143,7 @@
 			files = (
 				830CDACC22F31A0400C2BC91 /* AppDelegate.swift in Sources */,
 				830CDAE322F32BCA00C2BC91 /* GrassViewController.swift in Sources */,
+				830CDAE922F355A200C2BC91 /* FoundPokemonViewController.swift in Sources */,
 				830CDAD422F31A0400C2BC91 /* pickAGrass.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
