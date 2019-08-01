@@ -8,10 +8,29 @@
 
 import UIKit
 
+var PokeDict = ["Bulbasaur": "001",
+                "Mudkip": "258",
+                "Ninetales": "038",
+                "Pichu": "172",
+                "Phanpy": "231",
+                "Munna": "571",
+                "Mimikyu": "778",
+                "Scraggy": "559",
+                "Scizor": "212",
+                "Ducklett": "580",
+                "Mawile": "303",
+                "Snorunt": "361",
+                "Palkia": "484",
+                "Swirlix": "684",
+                "Seviper": "336",
+                "Bidoof": "399",
+                "Mienfoo": "619",
+                "Onix": "095"]
 class FoundPokemonViewController: UIViewController {
 
     @IBOutlet weak var congratsText: UILabel!
     
+    @IBOutlet weak var picPokemonFound: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +39,7 @@ class FoundPokemonViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         congratsText.text = "You found a \(pokemonFound)!"
+        picPokemonFound.image =  UIImage(named: PokeDict[pokemonFound]!)
     }
     
 

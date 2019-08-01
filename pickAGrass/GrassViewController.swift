@@ -8,7 +8,7 @@
 
 import UIKit
 
-var pokemonList = ["Bulbasaur", "Mudkip", "Ninetails", "Pichu", "Phanpy", "Munna", "Mimikyu", "Scraggy", "Scizor", "Ducklett", "Mawile", "Snorunt", "Palkia", "Swirlix", "Seviper", "Bidoof", "Mienfoo", "Onix"]
+var pokemonList = ["Bulbasaur", "Mudkip", "Ninetales", "Pichu", "Phanpy", "Munna", "Mimikyu", "Scraggy", "Scizor", "Ducklett", "Mawile", "Snorunt", "Palkia", "Swirlix", "Seviper", "Bidoof", "Mienfoo", "Onix"]
 
 func whatPokemonFound() -> String {
     let randPokemonIndex = Int.random(in: 1 ... 18)
