@@ -23,6 +23,23 @@ class GrassViewController: UIViewController {
     @IBOutlet weak var grass5: UIButton!
     @IBOutlet weak var grass6: UIButton!
 
+    @IBAction func mayTalking(_ sender: Any) {
+        let mayMessages = [
+            "\"Gotta catch 'em all\"",
+            "\"My Mudkip will destroy your Pokemon\"",
+            "\"I have all 8 Hoenn gym badges\"",
+            "\"I leik mudkipz\"",
+            "\"My Mudkip is in the top percentage of all Mudkip\""
+        ]
+        
+        let alertController = UIAlertController(title: "May", message: mayMessages[Int.random(in: 0 ... 4)], preferredStyle: .alert)
+        
+        let okMay = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(okMay)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func showMessage(sender: UIButton) {
         var grassMessage = "Grass not working"
         var monWasFound = false
